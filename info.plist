@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>workingconcept.datespan</string>
+	<key>category</key>
+	<string>Tools</string>
+	<key>connections</key>
+	<dict>
+		<key>417EDFE4-EEA3-4586-BACB-72B5CD1488FA</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>D06D3D35-232B-4572-8123-A7BE7F9A5CE7</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>Matt Stein</string>
+	<key>description</key>
+	<string>Calculate the difference between dates.</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Date Span</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<false/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>D06D3D35-232B-4572-8123-A7BE7F9A5CE7</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>36</integer>
+				<key>keyword</key>
+				<string>datespan</string>
+				<key>script</key>
+				<string>TIMEZONE=`date +%Z`
+php -f datespan.php -- "{query}" $TIMEZONE</string>
+				<key>title</key>
+				<string>Date Span</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>417EDFE4-EEA3-4586-BACB-72B5CD1488FA</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string>Add a single date to see the difference in years, months, business weeks, weeks, days, hours, and minutes from today.
+
+Add two dates to see the difference between the two, in the same units as above.
+
+This will use any string that PHP can convert into a date, so all the following are valid input…
+
+- “1/1/13”
+- “1/1/13 to 10/31/13”
+- “january 1”
+- “january 1 to march 31”
+- “8:15pm”
+- “9am to 5pm”
+
+Please improve this plugin if you’d like, or just say hi—I’d love to know if you’ve found it useful!
+
+- Matt (matt@workingconcept.com)</string>
+	<key>uidata</key>
+	<dict>
+		<key>417EDFE4-EEA3-4586-BACB-72B5CD1488FA</key>
+		<dict>
+			<key>ypos</key>
+			<real>60</real>
+		</dict>
+		<key>D06D3D35-232B-4572-8123-A7BE7F9A5CE7</key>
+		<dict>
+			<key>ypos</key>
+			<real>10</real>
+		</dict>
+	</dict>
+	<key>webaddress</key>
+	<string>http://workingconcept.com</string>
+</dict>
+</plist>
