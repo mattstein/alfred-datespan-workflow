@@ -1,3 +1,5 @@
+# Alfred Datespan Workflow
+
 Use this workflow to get the difference between two dates in Alfred. This relies exclusively on PHP 5.3+'s [DateInterval](http://www.php.net/manual/en/dateinterval.format.php) method, which is happy to accept a variety of inputs and works pretty well! Examples:
 
 - `datespan tomorrow`: countdown in hours and minutes
@@ -6,6 +8,10 @@ Use this workflow to get the difference between two dates in Alfred. This relies
 
 You can use any format that [`strtotime`](https://php.net/manual/en/function.strtotime.php) can parse, so I'm sure there are plenty of variations I've not thought to try yet.
 
-Screenshots with a few more examples [on my humble blog](http://workingconcept.com/blog/date-span-alfred-workflow).
+Screenshots with a few more examples [on my blog](http://workingconcept.com/blog/date-span-alfred-workflow).
 
 Comments, suggestions, criticisms, and pull requests all welcome!
+
+## Usage
+
+Download or check out this repository, zip up its contents, and change the `.zip` file extension to `.alfredworkflow`. Double-click to install.
