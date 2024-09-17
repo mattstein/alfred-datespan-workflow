@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>bundleid</key>
-	<string>workingconcept.datespan</string>
+	<string>com.mattstein.date-span</string>
 	<key>category</key>
 	<string>Tools</string>
 	<key>connections</key>
@@ -17,6 +17,8 @@
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 		</array>
 	</dict>
@@ -37,26 +39,54 @@
 				<false/>
 				<key>clipboardtext</key>
 				<string>{query}</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>transient</key>
+				<false/>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.output.clipboard</string>
 			<key>uid</key>
 			<string>D06D3D35-232B-4572-8123-A7BE7F9A5CE7</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
 				<key>argumenttype</key>
 				<integer>0</integer>
 				<key>escaping</key>
 				<integer>36</integer>
 				<key>keyword</key>
 				<string>datespan</string>
+				<key>queuedelaycustom</key>
+				<integer>1</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<false/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
 				<key>script</key>
 				<string>TIMEZONE=`date +%Z`
 php -f datespan.php -- "{query}" $TIMEZONE</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
 				<key>title</key>
 				<string>Date Span</string>
 				<key>type</key>
@@ -69,40 +99,35 @@ php -f datespan.php -- "{query}" $TIMEZONE</string>
 			<key>uid</key>
 			<string>417EDFE4-EEA3-4586-BACB-72B5CD1488FA</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>3</integer>
 		</dict>
 	</array>
 	<key>readme</key>
-	<string>Add a single date to see the difference in years, months, business weeks, weeks, days, hours, and minutes from today.
-
-Add two dates to see the difference between the two, in the same units as above.
-
-This will use any string that PHP can convert into a date, so all the following are valid input…
-
-- “1/1/13”
-- “1/1/13 to 10/31/13”
-- “january 1”
-- “january 1 to march 31”
-- “8:15pm”
-- “9am to 5pm”
-
-Please improve this plugin if you’d like, or just say hi—I’d love to know if you’ve found it useful!
-
-- Matt (matt@workingconcept.com)</string>
+	<string></string>
 	<key>uidata</key>
 	<dict>
 		<key>417EDFE4-EEA3-4586-BACB-72B5CD1488FA</key>
 		<dict>
+			<key>xpos</key>
+			<real>225</real>
 			<key>ypos</key>
-			<real>60</real>
+			<real>235</real>
 		</dict>
 		<key>D06D3D35-232B-4572-8123-A7BE7F9A5CE7</key>
 		<dict>
+			<key>xpos</key>
+			<real>510</real>
 			<key>ypos</key>
-			<real>10</real>
+			<real>235</real>
 		</dict>
 	</dict>
+	<key>userconfigurationconfig</key>
+	<array/>
+	<key>variablesdontexport</key>
+	<array/>
+	<key>version</key>
+	<string></string>
 	<key>webaddress</key>
-	<string>http://workingconcept.com</string>
+	<string>https://mattstein.com</string>
 </dict>
 </plist>

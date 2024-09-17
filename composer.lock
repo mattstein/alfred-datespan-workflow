@@ -1,0 +1,68 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "be1c9227d0137fd0b27eb394bffe6fa0",
+    "packages": [
+        {
+            "name": "joetannenbaum/alfred-workflow",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/joetannenbaum/alfred-workflow.git",
+                "reference": "7a517f90020e5bcf5248c62f6184332f7f1c1b7d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/joetannenbaum/alfred-workflow/zipball/7a517f90020e5bcf5248c62f6184332f7f1c1b7d",
+                "reference": "7a517f90020e5bcf5248c62f6184332f7f1c1b7d",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "php": "^7.4.0||^8.0"
+            },
+            "require-dev": {
+                "laravel/pint": "^1.1",
+                "pestphp/pest": "^1.21",
+                "phpunit/phpunit": "^9.5"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Alfred\\Workflows\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Joe Tannenbaum",
+                    "email": "joe@joe.codes"
+                }
+            ],
+            "description": "PHP helper for creating Alfred Workflows.",
+            "homepage": "https://joe.codes",
+            "support": {
+                "issues": "https://github.com/joetannenbaum/alfred-workflow/issues",
+                "source": "https://github.com/joetannenbaum/alfred-workflow"
+            },
+            "time": "2022-10-10T17:56:33+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": {
+        "php": "^8.0"
+    },
+    "platform-dev": [],
+    "plugin-api-version": "2.6.0"
+}

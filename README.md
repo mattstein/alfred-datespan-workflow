@@ -2,6 +2,10 @@
 
 Get human-formatted date/time intervals with Alfred.
 
+![Workflow screenshot](resources/screenshot.png)
+
+Custom theme using [Berkeley Mono](https://berkeleygraphics.com/typefaces/berkeley-mono/).
+
 ## Installation
 
 Download the `.alfredworkflow` file from the [latest release](https://github.com/mattstein/alfred-datespan-workflow/releases) and double-click to install.

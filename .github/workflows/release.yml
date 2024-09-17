@@ -10,6 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - name: Install Composer dependencies
+        uses: php-actions/composer@v6
       # Store version number without `v`
       - name: Write release version
         run: |
