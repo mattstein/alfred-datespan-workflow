@@ -1,0 +1,33 @@
+name: Create Alfred Workflow
+
+on:
+  push:
+    tags:
+      - '*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install Composer dependencies
+        uses: php-actions/composer@v6
+      # Store version number without `v`
+      - name: Write release version
+        run: |
+          TAG=${{ github.ref_name }}
+          echo "VERSION=${TAG#v}" >> $GITHUB_ENV
+      - name: Build Alfred workflow
+        id: alfred_builder
+        uses: com30n/build-alfred-workflow@v1
+        with:
+          workflow_dir: .
+          exclude_patterns: '.git/* .gitignore .github docker_tag Dockerfile-php-build DOCKER_ENV output.log resources/*'
+          custom_version: "${{ env.VERSION }}"
+      - name: Create release
+        id: create_release
+        uses: softprops/action-gh-release@v2
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          token: ${{ secrets.RELEASE_TOKEN }}
+          files: ${{ steps.alfred_builder.outputs.workflow_file }}
