@@ -3,7 +3,7 @@ name: Create Alfred Workflow
 on:
   push:
     tags:
-      - '*'
+      - "*"
 
 jobs:
   build:
@@ -22,7 +22,7 @@ jobs:
         uses: com30n/build-alfred-workflow@v1
         with:
           workflow_dir: .
-          exclude_patterns: '.git/* .gitignore .github docker_tag Dockerfile-php-build DOCKER_ENV output.log resources/*'
+          exclude_patterns: ".git/* .gitignore .github/* docker_tag Dockerfile-php-build DOCKER_ENV output.log resources/*"
           custom_version: "${{ env.VERSION }}"
       - name: Create release
         id: create_release
