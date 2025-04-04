@@ -1,6 +1,18 @@
 {
+  "name": "mattstein/alfred-datespan-workflow",
+  "type": "project",
+  "description": "Quickly calculate a date range with Alfred.",
+  "keywords": [
+    "alfred"
+  ],
   "require": {
     "php": "^8.0",
-    "joetannenbaum/alfred-workflow": "^1.1"
-  }
+    "joetannenbaum/alfred-workflow": "dev-master"
+  },
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/mattstein/alfred-workflow"
+    }
+  ]
 }
