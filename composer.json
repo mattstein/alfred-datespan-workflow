@@ -6,13 +6,29 @@
     "alfred"
   ],
   "require": {
-    "php": "^8.0",
+    "php": "^8.2",
     "joetannenbaum/alfred-workflow": "dev-master"
+  },
+  "require-dev": {
+    "pestphp/pest": "^3.0"
+  },
+  "autoload": {
+    "files": [
+      "src/helpers.php"
+    ]
   },
   "repositories": [
     {
       "type": "vcs",
       "url": "https://github.com/mattstein/alfred-workflow"
     }
-  ]
+  ],
+  "config": {
+    "allow-plugins": {
+      "pestphp/pest-plugin": true
+    }
+  },
+  "scripts": {
+    "test": "pest"
+  }
 }

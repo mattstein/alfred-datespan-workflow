@@ -1,6 +1,7 @@
 <?php
 
 include 'vendor/autoload.php';
+include __DIR__ . '/src/helpers.php';
 
 use Alfred\Workflows\Workflow;
 
@@ -117,12 +118,3 @@ if ($totalMinutes > 0) {
 }
 
 $workflow->output();
-
-
-/**
- * Format numbers and pluralize as needed.
- */
-function pluralize($label, $value): string
-{
-	return number_format($value) . " " . $label . ($value !== 1 ? "s" : "");
-}
